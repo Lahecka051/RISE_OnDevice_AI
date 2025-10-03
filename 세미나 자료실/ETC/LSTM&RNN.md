@@ -707,3 +707,97 @@ normal_ranges = {
 - PyTorch 공식 RNN 튜토리얼
 
 ---
+
+## 참고문헌
+
+### 학술 논문
+
+[1] Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780.
+
+[2] Bengio, Y., Simard, P., & Frasconi, P. (1994). Learning long-term dependencies with gradient descent is difficult. IEEE transactions on neural networks, 5(2), 157-166.
+
+[3] Cho, K., Van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., & Bengio, Y. (2014). Learning phrase representations using RNN encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078.
+
+[4] Greff, K., Srivastava, R. K., Koutník, J., Steunebrink, B. R., & Schmidhuber, J. (2017). LSTM: A search space odyssey. IEEE transactions on neural networks and learning systems, 28(10), 2222-2232.
+
+[5] Pascanu, R., Mikolov, T., & Bengio, Y. (2013). On the difficulty of training recurrent neural networks. International conference on machine learning (pp. 1310-1318). PMLR.
+
+[6] Jozefowicz, R., Zaremba, W., & Sutskever, I. (2015). An empirical exploration of recurrent network architectures. International conference on machine learning (pp. 2342-2350). PMLR.
+
+[7] Gers, F. A., Schmidhuber, J., & Cummins, F. (2000). Learning to forget: Continual prediction with LSTM. Neural computation, 12(10), 2451-2471.
+
+[8] Graves, A., Mohamed, A. R., & Hinton, G. (2013). Speech recognition with deep recurrent neural networks. 2013 IEEE international conference on acoustics, speech and signal processing (pp. 6645-6649).
+
+[9] Bahdanau, D., Cho, K., & Bengio, Y. (2014). Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473.
+
+[10] Chung, J., Gulcehre, C., Cho, K., & Bengio, Y. (2014). Empirical evaluation of gated recurrent neural networks on sequence modeling. arXiv preprint arXiv:1412.3555.
+
+### 교과서 및 서적
+
+[11] Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep learning. MIT press. (Chapter 10: Sequence Modeling: Recurrent and Recursive Nets)
+
+[12] Bishop, C. M. (2006). Pattern recognition and machine learning. Springer. (Chapter 13: Sequential Data)
+
+[13] Aggarwal, C. C. (2018). Neural networks and deep learning: A textbook. Springer. (Chapter 7: Recurrent Neural Networks)
+
+[14] Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow. O'Reilly Media. (Chapter 15: Processing Sequences Using RNNs and CNNs)
+
+### 온라인 자료 및 블로그
+
+[15] Olah, C. (2015). Understanding LSTM Networks. colah's blog. https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+[16] Karpathy, A. (2015). The Unreasonable Effectiveness of Recurrent Neural Networks. http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+[17] Distill Publication. (2016). Attention and Augmented Recurrent Neural Networks. https://distill.pub/2016/augmented-rnns/
+
+[18] Staudemeyer, R. C., & Morris, E. R. (2019). Understanding LSTM--a tutorial into long short-term memory recurrent neural networks. arXiv preprint arXiv:1909.09586.
+
+### 프레임워크 공식 문서
+
+[19] PyTorch Documentation. (2024). Recurrent Neural Network (RNN) Tutorial. https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html
+
+[20] TensorFlow Documentation. (2024). Recurrent Neural Networks (RNN) with Keras. https://www.tensorflow.org/guide/keras/rnn
+
+[21] PyTorch Documentation. (2024). torch.nn.LSTM. https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html
+
+[22] TensorFlow Documentation. (2024). tf.keras.layers.LSTM. https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM
+
+### 최신 연구 및 발전
+
+[23] Gu, A., & Dao, T. (2023). Mamba: Linear-Time Sequence Modeling with Selective State Spaces. arXiv preprint arXiv:2312.00752.
+
+[24] Peng, B., Alcaide, E., Anthony, Q., et al. (2023). RWKV: Reinventing RNNs for the Transformer Era. arXiv preprint arXiv:2305.13048.
+
+[25] Chen, R. T., Rubanova, Y., Bettencourt, J., & Duvenaud, D. K. (2018). Neural ordinary differential equations. Advances in neural information processing systems, 31.
+
+[26] Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). Attention is all you need. Advances in neural information processing systems, 30.
+
+### 데이터셋 및 벤치마크
+
+[27] Marcus, M. P., Marcinkiewicz, M. A., & Santorini, B. (1993). Building a large annotated corpus of English: The Penn Treebank. Computational linguistics, 19(2), 313-330.
+
+[28] Merity, S., Keskar, N. S., & Socher, R. (2017). Regularizing and optimizing LSTM language models. arXiv preprint arXiv:1708.02182. (WikiText-103)
+
+[29] Panayotov, V., Chen, G., Povey, D., & Khudanpur, S. (2015). LibriSpeech: an ASR corpus based on public domain audio books. 2015 IEEE international conference on acoustics, speech and signal processing (ICASSP) (pp. 5206-5210).
+
+[30] Maas, A. L., Daly, R. E., Pham, P. T., Huang, D., Ng, A. Y., & Potts, C. (2011). Learning word vectors for sentiment analysis. Proceedings of the 49th annual meeting of the association for computational linguistics (pp. 142-150).
+
+### 강의 자료
+
+[31] Stanford University. (2023). CS231n: Convolutional Neural Networks for Visual Recognition. Lecture 10: Recurrent Neural Networks. http://cs231n.stanford.edu/
+
+[32] MIT. (2024). 6.S191: Introduction to Deep Learning. Lecture 2: Recurrent Neural Networks. http://introtodeeplearning.com/
+
+[33] Ng, A. (2024). Deep Learning Specialization - Sequence Models. Coursera. https://www.coursera.org/learn/nlp-sequence-models
+
+[34] Fast.ai. (2023). Practical Deep Learning for Coders - Part 2. https://course.fast.ai/
+
+### 구현 예제 및 튜토리얼
+
+[35] Google Research. (2024). Understanding LSTM Networks - Colab Notebooks. https://colab.research.google.com/
+
+[36] Brownlee, J. (2023). Long Short-Term Memory Networks With Python. Machine Learning Mastery.
+
+[37] GitHub - pytorch/examples. (2024). Word-level language modeling RNN, LSTM, GRU examples. https://github.com/pytorch/examples/tree/main/word_language_model
+
+[38] Keras Examples. (2024). Text generation with LSTM. https://keras.io/examples/generative/lstm_text_generation/
