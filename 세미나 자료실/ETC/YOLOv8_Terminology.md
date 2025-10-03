@@ -44,13 +44,12 @@ visual_pyramid = """
 ##### 1.2.1 백본의 역할과 구조
 **이미지에서 계층적으로 특징을 추출하는 CNN 네트워크** [Source. 2]
 
-백본은 이미지에서 다양한 레벨의 특징맵을 생성하는 역할 수행:
+백본은 이미지에서 다양한 레벨의 특징맵을 생성하는 역할 수행
 
 ```python
 class YOLOv8_Backbone:
     """
     백본: 이미지 → 특징맵 변환
-    검출 수행하지 않음!
     """
     def forward(self, image):  # 640×640×3 입력
         # Stage 1: 초기 특징 추출
@@ -73,14 +72,14 @@ class YOLOv8_Backbone:
         x = self.c2f_5(x)
         p5 = self.sppf(x)      # P5 특징맵 (큰 객체용)
         
-        # 출력: 특징맵들 (아직 검출 안 함!)
+        # 출력: 특징맵들
         return p3, p4, p5
 ```
 
 ##### 1.2.2 C2f 모듈 상세
 **YOLOv8의 핵심 빌딩 블록 - CSP Bottleneck with 2 convolutions** [Source. 3]
 
-C2f는 CSP(Cross Stage Partial) 구조를 개선한 YOLOv8의 핵심 모듈:
+C2f는 CSP(Cross Stage Partial) 구조를 개선한 YOLOv8의 핵심 모듈
 
 ```python
 class C2f(nn.Module):
@@ -114,7 +113,7 @@ class C2f(nn.Module):
 ##### 1.2.3 P레벨(Pyramid Level)의 의미
 **특징맵의 해상도 레벨을 나타내는 다운샘플링 정도** [Source. 4]
 
-P2~P5는 특징맵의 해상도 레벨을 의미하며, 각 레벨은 다른 크기의 객체 검출 담당:
+P2~P5는 특징맵의 해상도 레벨을 의미하며, 각 레벨은 다른 크기의 객체 검출 담당
 
 | P레벨 | 다운샘플링 | 해상도 | 특징맵 역할 | 담당 객체 크기 | 객체 검출 여부 |
 |-------|------------|--------|-------------|----------------|---------------|
@@ -128,7 +127,7 @@ P2~P5는 특징맵의 해상도 레벨을 의미하며, 각 레벨은 다른 크
 ##### 1.3.1 넥의 역할과 구조
 **백본에서 추출된 특징맵들을 융합하여 개선하는 PANet 구조** [Source. 5]
 
-넥은 백본에서 추출된 특징맵들을 융합하여 특징을 더 풍부하게 만드는 역할 수행:
+넥은 백본에서 추출된 특징맵들을 융합하여 특징을 더 풍부하게 만드는 역할 수행
 
 ```python
 class YOLOv8_Neck:
@@ -159,7 +158,7 @@ class YOLOv8_Neck:
         p5_concat = concatenate([p4_down, p5])
         p5_final = self.c2f_bu_p5(p5_concat)
         
-        # 출력: 개선된 특징맵들 (여전히 검출 안 함!)
+        # 출력: 개선된 특징맵들
         return p3_refined, p4_final, p5_final
 ```
 
@@ -168,13 +167,13 @@ class YOLOv8_Neck:
 ##### 1.4.1 헤드의 역할과 구조
 **Decoupled Head로 분류와 회귀를 분리하여 실제 객체 검출 수행** [Source. 6]
 
-헤드에서만 실제 객체 검출이 수행되며, 넥에서 개선된 특징맵을 받아 각 위치에서 객체의 존재 여부, 위치, 클래스 예측:
+헤드에서만 실제 객체 검출이 수행되며, 넥에서 개선된 특징맵을 받아 각 위치에서 객체의 존재 여부, 위치, 클래스 예측
 
 ```python
 class YOLOv8_Head:
     """
     Decoupled Head: 분류와 회귀를 분리
-    여기서만 실제 검출 수행!
+    실제 검출 수행!
     """
     def __init__(self, nc=80):  # nc = 클래스 수
         # 각 P레벨별 검출 헤드
